@@ -12,6 +12,10 @@ const btnbackTag=qs('.btn-back');
 const seoTag=qs('.seo');
 const dropper=qs('.dropper');
 const dropboxTag=qs('.dropbox');
+const deletebtnTag=qs('.deletebtn');
+const deleteAlertTag=qs('.del-alert');
+const AlertDarkTag=document.querySelectorAll('.alert-dark');
+const AlertCancleBtn=qs('.alert-cancle')
 function qs(el) {
     return document.querySelector(el);
  }
@@ -82,3 +86,19 @@ dropper.addEventListener('click',()=>{
             };
         }
     })
+
+deletebtnTag.addEventListener('click',deleteAlert);
+function deleteAlert() {
+    ForAlert('block');
+}
+AlertCancleBtn.addEventListener('click',cancle)
+function cancle() {
+    ForAlert('none');
+}
+
+function ForAlert(style) {
+    deleteAlertTag.style.display=style;
+    AlertDarkTag.forEach(element => {
+        element.style.display=style;
+    });;
+}

@@ -364,6 +364,7 @@ nav{
 
 .delete-btn{
     color: var(--danger);
+    cursor: pointer;
 
 }
 .archive-btn{
@@ -390,13 +391,14 @@ nav{
 
 /* ------------------------mail text read --------------------*/
 .ReadPage{
+    width: 100%;
     padding: 20px;
     display: none;
     color: white;
-    padding:0 20px ;
-    padding-top: 20px;
-    height: 70vh;
-    overflow-y:scroll ;
+    padding: 0 20px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 119px;
 }
 .btn-gp{
     display: flex;
@@ -704,4 +706,47 @@ nav{
         width: 290px;
 
     }
+}
+.alert-dark{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(75, 74, 74, 0.648);
+    top: 0;
+    left: 0;
+    display: none;
+    transition: all ease-in 6s;
+}
+.del-alert{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    border-radius: 5px;
+    height: 130px;
+    transform: translate(-150px,-180px);
+    background-color: var(--bgColor);
+    padding: 18px;
+    display: none;
+    transition: all ease-in 6s;
+}
+.alert-btngp{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.btn{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.alert-cancle{
+    background-color: aliceblue;
+}
+.alert-delete{
+    color: #edecf3;
+    background-color: var(--danger);
 }
